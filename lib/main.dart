@@ -1,6 +1,5 @@
-// ignore_for_file: unrelated_type_equality_checks
-
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: HomePage(),
     );
   }
@@ -50,7 +50,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF58B19F),
+      backgroundColor: const Color(0xFF58B19F),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -60,15 +60,15 @@ class _HomePageState extends State<HomePage> {
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text(
+                  Text(
                     "Player 1",
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: "Edu",
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold),
+                    style: GoogleFonts.asul(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700,
+                      fontStyle: FontStyle.italic,
+                    ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   GestureDetector(
@@ -82,15 +82,15 @@ class _HomePageState extends State<HomePage> {
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text(
+                  Text(
                     "Player 2",
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: "Edu",
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold),
+                    style: GoogleFonts.asul(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700,
+                      fontStyle: FontStyle.italic,
+                    ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   GestureDetector(
@@ -109,7 +109,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Center(
@@ -136,18 +136,27 @@ class _HomePageState extends State<HomePage> {
                   }
                 });
               },
-              child: Text("Check Who Win"),
+              style: ElevatedButton.styleFrom(primary: Colors.white),
+              child: Text(
+                "Check Who Win",
+                style: GoogleFonts.bitter(
+                  color: Colors.black,
+                  fontSize: 16,
+                ),
+              ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
-          Text(txt,
-              style: TextStyle(
-                  fontFamily: "Edu",
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black)),
+          Text(
+            txt,
+            style: GoogleFonts.alice(
+                textStyle: Theme.of(context).textTheme.headline4,
+                fontSize: 30,
+                fontWeight: FontWeight.w800,
+                fontStyle: FontStyle.italic),
+          ),
         ],
       ),
     );
