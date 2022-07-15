@@ -17,4 +17,3 @@ samples, guidance on mobile development, and a full API reference.
 
 
 
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/94280212/179207415-957884bc-fee5-45c7-958a-dde9b5f72ff4.gif)
